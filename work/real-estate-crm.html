@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Real estate CRM · Kamal Rajput</title>
-<meta name="description" content="A CRM for a real estate team to track leads, site visits and deals in one place, with follow-ups handled automatically.">
+<meta name="description" content="A multi-tenant CRM for realtors, built around a live building view where every flat shows its status, with leads matched to flats automatically.">
 <meta name="theme-color" content="#07080A">
 <meta property="og:title" content="Real estate CRM · Kamal Rajput">
-<meta property="og:description" content="A CRM for a real estate team to track leads, site visits and deals in one place, with follow-ups handled automatically.">
+<meta property="og:description" content="A multi-tenant CRM for realtors, built around a live building view where every flat shows its status, with leads matched to flats automatically.">
 <meta property="og:type" content="website">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,8 +32,8 @@
     <div class="wrap">
       <a class="back" href="../index.html#work">← All work</a>
       <h1>Real estate CRM</h1>
-      <p class="lede">A CRM for a real estate team to track leads, site visits and deals in one place, with follow-ups handled automatically.</p>
-      <div class="cs-meta"><span>Real estate</span><span>CRM</span><span>Automation</span></div>
+      <p class="lede">A multi-tenant CRM for realtors, built around a live building view where every flat shows its status, with leads matched to flats automatically.</p>
+      <div class="cs-meta"><span>Real estate</span><span>SaaS</span><span>CRM</span><span>Automation</span></div>
     </div>
   </header>
 
@@ -43,12 +43,12 @@
               <rect class="f" x="24" y="52" width="64" height="26" rx="6"/><rect class="m" x="24" y="86" width="64" height="26" rx="6"/><rect class="m" x="118" y="52" width="64" height="26" rx="6"/><rect class="m" x="212" y="52" width="64" height="26" rx="6"/><rect class="m" x="212" y="86" width="64" height="26" rx="6"/></svg></div>
 
     <div class="cs-body">
-      <aside><div><span class="eyebrow">Industry</span><b>Real estate</b></div><div><span class="eyebrow">Services</span><b>CRM build, automation</b></div><div><span class="eyebrow">Type</span><b>Internal tool</b></div></aside>
+      <aside><div><span class="eyebrow">Industry</span><b>Real estate</b></div><div><span class="eyebrow">Type</span><b>SaaS product</b></div><div><span class="eyebrow">My role</span><b>Full-stack build</b></div><div><span class="eyebrow">Stack</span><div class="stack-chips"><span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span><span>Framer Motion</span><span>Flask</span><span>PostgreSQL</span><span>Redis</span><span>Celery</span></div></div></aside>
       <article>
-        <!-- TODO(Kamal): add real details, screenshots and the tech stack for this project. -->
-        <section><span class="eyebrow">The problem</span><h2>What needed solving</h2><p>Leads were arriving from several places, and the team tracked them across chats and spreadsheets. It was hard to see who had been contacted, which site visits were booked, and which deals were close to closing.</p></section>
-        <section><span class="eyebrow">What I built</span><h2>The solution</h2><ul><li>A single pipeline for every lead, from first enquiry to closed deal</li><li>Site visit scheduling attached to each lead</li><li>Deal tracking so the team can see what is close to closing</li><li>Automatic follow-ups so no new lead waits for a reply</li></ul></section>
-        <section><span class="eyebrow">Outcome</span><h2>Where it landed</h2><p>The team works from one shared view of every lead, and routine follow-ups happen without anyone having to remember them.</p></section>
+        <section><span class="eyebrow">The brief</span><h2>What needed solving</h2><p>Realtors juggle inventory across projects and towers, buyers with different budgets, and deals that tie up specific flats. General-purpose CRMs don't understand any of that, so teams end up back in spreadsheets.</p></section>
+        <section><span class="eyebrow">What I built</span><h2>The solution</h2><ul><li>A building view that draws each tower floor by floor, with every flat coloured by status: vacant, for sale, for rent, on hold, booked, sold or rented</li><li>One-click actions on any flat: change its status, hold it for a client with a countdown, book a site visit or start a deal</li><li>Matching both ways: flats that fit a client's budget, size and purpose, and clients who fit a flat</li><li>A full sales toolkit: lead scoring, a drag-and-drop pipeline, tasks, calendar, email templates, and reports with CSV and PDF export</li><li>A visual automation builder with triggers, conditions, actions and delays</li><li>Subscription billing with trials, plan changes and GST invoices, plus a separate console to run the platform</li></ul></section>
+        <section><span class="eyebrow">Under the hood</span><h2>How it's built</h2><ul><li>Each workspace's data is isolated at the database level with PostgreSQL row-level security</li><li>Holds release themselves when the timer ends, and winning a deal marks the flat sold or rented automatically</li><li>The platform console is a separate app with its own login, mandatory two-factor sign-in and a full audit log</li><li>Billing works with Stripe or Razorpay through one shared payment state machine</li><li>Plans, prices, limits and feature flags are all data, so they change without a deploy</li></ul></section>
+        <section><span class="eyebrow">Outcome</span><h2>Where it landed</h2><p>Realtors see their whole inventory at a glance and act on it in a click, and the business side of the product (plans, billing, feature flags) runs from an admin console instead of code changes.</p></section>
       </article>
     </div>
 
