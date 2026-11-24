@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Real estate CRM · Kamal Rajput</title>
+<meta name="description" content="A multi-tenant CRM for realtors, built around a live building view where every flat shows its status, with leads matched to flats automatically.">
+<meta name="theme-color" content="#07080A">
+<meta property="og:title" content="Real estate CRM · Kamal Rajput">
+<meta property="og:description" content="A multi-tenant CRM for realtors, built around a live building view where every flat shows its status, with leads matched to flats automatically.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <a class="brand" href="../index.html"><i aria-hidden="true"></i>Kamal Rajput</a>
+  <ul>
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../index.html#call">Contact</a></li>
+  </ul>
+  <a class="glass" href="../index.html#call">Book a call <span class="arrow">→</span></a>
+</nav>
+
+<main id="top">
+  <header class="cs-hero">
+    <div class="glow" aria-hidden="true" style="background:radial-gradient(40% 50% at 70% 30%, var(--cyan), transparent 70%), radial-gradient(40% 50% at 25% 60%, var(--violet), transparent 70%)"></div>
+    <div class="wrap">
+      <a class="back" href="../index.html#work">← All work</a>
+      <h1>Real estate CRM</h1>
+      <p class="lede">A multi-tenant CRM for realtors, built around a live building view where every flat shows its status, with leads matched to flats automatically.</p>
+      <div class="cs-meta"><span>Real estate</span><span>SaaS</span><span>CRM</span><span>Automation</span></div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="cs-cover art-1" aria-hidden="true"><svg viewBox="0 0 300 200"><rect class="s" x="0" y="0" width="300" height="200" rx="14"/><rect class="m" x="16" y="16" width="70" height="8" rx="4"/>
+              <rect class="s" x="16" y="40" width="80" height="144" rx="8"/><rect class="s" x="110" y="40" width="80" height="144" rx="8"/><rect class="s" x="204" y="40" width="80" height="144" rx="8"/>
+              <rect class="f" x="24" y="52" width="64" height="26" rx="6"/><rect class="m" x="24" y="86" width="64" height="26" rx="6"/><rect class="m" x="118" y="52" width="64" height="26" rx="6"/><rect class="m" x="212" y="52" width="64" height="26" rx="6"/><rect class="m" x="212" y="86" width="64" height="26" rx="6"/></svg></div>
+
+    <div class="cs-body">
+      <aside><div><span class="eyebrow">Industry</span><b>Real estate</b></div><div><span class="eyebrow">Type</span><b>SaaS product</b></div><div><span class="eyebrow">My role</span><b>Full-stack build</b></div><div><span class="eyebrow">Stack</span><div class="stack-chips"><span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span><span>Framer Motion</span><span>Flask</span><span>PostgreSQL</span><span>Redis</span><span>Celery</span></div></div></aside>
+      <article>
+        <section><span class="eyebrow">The brief</span><h2>What needed solving</h2><p>Realtors juggle inventory across projects and towers, buyers with different budgets, and deals that tie up specific flats. General-purpose CRMs don't understand any of that, so teams end up back in spreadsheets.</p></section>
+        <section><span class="eyebrow">What I built</span><h2>The solution</h2><ul><li>A building view that draws each tower floor by floor, with every flat coloured by status: vacant, for sale, for rent, on hold, booked, sold or rented</li><li>One-click actions on any flat: change its status, hold it for a client with a countdown, book a site visit or start a deal</li><li>Matching both ways: flats that fit a client's budget, size and purpose, and clients who fit a flat</li><li>A full sales toolkit: lead scoring, a drag-and-drop pipeline, tasks, calendar, email templates, and reports with CSV and PDF export</li><li>A visual automation builder with triggers, conditions, actions and delays</li><li>Subscription billing with trials, plan changes and GST invoices, plus a separate console to run the platform</li></ul></section>
+        <section><span class="eyebrow">Under the hood</span><h2>How it's built</h2><ul><li>Each workspace's data is isolated at the database level with PostgreSQL row-level security</li><li>Holds release themselves when the timer ends, and winning a deal marks the flat sold or rented automatically</li><li>The platform console is a separate app with its own login, mandatory two-factor sign-in and a full audit log</li><li>Billing works with Stripe or Razorpay through one shared payment state machine</li><li>Plans, prices, limits and feature flags are all data, so they change without a deploy</li></ul></section>
+        <section><span class="eyebrow">Outcome</span><h2>Where it landed</h2><p>Realtors see their whole inventory at a glance and act on it in a click, and the business side of the product (plans, billing, feature flags) runs from an admin console instead of code changes.</p></section>
+      </article>
+    </div>
+
+    <a class="next" href="real-estate-website.html"><div><span class="eyebrow">Next project</span><h3 style="margin-top:.6rem">Real estate business website</h3></div><span class="glass">View <span class="arrow">→</span></span></a>
+  </div>
+</main>
+
+<footer class="mf" id="mf">
+  <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+  <div class="marquee" aria-hidden="true"><div class="track">
+    <span>Websites <i>✦</i></span><span>Automation <i>✦</i></span><span>CRM builds <i>✦</i></span><span>Lead capture <i>✦</i></span><span>Integrations <i>✦</i></span>
+    <span>Websites <i>✦</i></span><span>Automation <i>✦</i></span><span>CRM builds <i>✦</i></span><span>Lead capture <i>✦</i></span><span>Integrations <i>✦</i></span>
+  </div></div>
+  <div class="wrap">
+    <div class="big">Let's <span class="serif">talk.</span></div>
+    <div class="mf-row">
+      <span class="mail" id="mail">rajput.kamal25@gmail.com</span>
+      <div class="pills">
+        <button class="glass mag" type="button" id="copy">Copy email</button>
+        <a class="glass mag" href="../index.html#call">Request a call</a>
+        <a class="glass mag" href="#top">Back to top ↑</a>
+      </div>
+    </div>
+    <div class="legal mono"><span>© 2026 Kamal Rajput</span><span>Websites · Automation · CRM</span></div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
