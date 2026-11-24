@@ -211,7 +211,6 @@ main { position: relative; z-index: 2; background: var(--bg); margin-bottom: var
 /* panel art */
 .art-1 { background: radial-gradient(70% 60% at 70% 20%, rgba(99,227,255,.55), transparent 60%), radial-gradient(60% 60% at 20% 70%, rgba(147,132,255,.5), transparent 65%), #0B0E14; }
 .art-2 { background: radial-gradient(70% 60% at 30% 25%, rgba(255,178,125,.6), transparent 60%), radial-gradient(60% 60% at 80% 75%, rgba(255,120,150,.35), transparent 65%), #120D0D; }
-.art-3 { background: radial-gradient(70% 60% at 65% 30%, rgba(147,132,255,.6), transparent 60%), radial-gradient(60% 60% at 15% 80%, rgba(255,178,125,.35), transparent 65%), #0D0B14; }
 .art-4 { background: radial-gradient(70% 60% at 70% 25%, rgba(99,227,255,.45), transparent 60%), radial-gradient(60% 60% at 20% 75%, rgba(255,140,120,.4), transparent 65%), #0B1112; }
 .art svg { position: absolute; right: 6%; top: 10%; width: min(440px, 70%); height: auto; opacity: .9; }
 .art .s { fill: rgba(255,255,255,.06); stroke: rgba(255,255,255,.28); stroke-width: 1.2; }
