@@ -1,6 +1,25 @@
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- Hero background video (shader stays as the fallback) ---------- */
+  var heroVideo = document.getElementById('hero-video');
+  if (heroVideo) {
+    if (reduce) {
+      heroVideo.removeAttribute('autoplay');
+      heroVideo.pause();
+    } else {
+      var showVideo = function () {
+        var h = document.getElementById('hero');
+        if (h) h.classList.add('has-video');
+      };
+      heroVideo.addEventListener('playing', showVideo);
+      // Autoplay can start before this script runs, so 'playing' may already have fired.
+      if (!heroVideo.paused && heroVideo.readyState > 2) showVideo();
+      var playing = heroVideo.play();
+      if (playing && playing.then) playing.then(showVideo, function () {});
+    }
+  }
+
   /* ---------- Shader hero (raw WebGL) ---------- */
   if (document.getElementById('shader')) (function () {
   var hero = document.getElementById('hero'), cv = document.getElementById('shader');
@@ -58,7 +77,7 @@
       window.addEventListener('pointermove', function (e) { tmx = e.clientX / innerWidth * 2 - 1; tmy = -(e.clientY / innerHeight * 2 - 1); }, { passive: true });
       if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { onScreen = en[0].isIntersecting; }).observe(hero);
       function loop() {
-        if (onScreen && !document.hidden) { mx += (tmx - mx) * 0.04; my += (tmy - my) * 0.04; draw((performance.now() - t0) / 1000); }
+        if (onScreen && !document.hidden && !hero.classList.contains('has-video')) { mx += (tmx - mx) * 0.04; my += (tmy - my) * 0.04; draw((performance.now() - t0) / 1000); }
         requestAnimationFrame(loop);
       }
       size();
