@@ -1,6 +1,25 @@
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- Hero video (plays in a box over the shader) ---------- */
+  var heroVideo = document.getElementById('hero-video');
+  if (heroVideo) {
+    if (reduce) {
+      heroVideo.removeAttribute('autoplay');
+      heroVideo.pause();
+    } else {
+      var showVideo = function () {
+        var h = document.getElementById('hero');
+        if (h) h.classList.add('has-video');
+      };
+      heroVideo.addEventListener('playing', showVideo);
+      // Autoplay can start before this script runs, so 'playing' may already have fired.
+      if (!heroVideo.paused && heroVideo.readyState > 2) showVideo();
+      var playing = heroVideo.play();
+      if (playing && playing.then) playing.then(showVideo, function () {});
+    }
+  }
+
   /* ---------- Shader hero (raw WebGL) ---------- */
   if (document.getElementById('shader')) (function () {
   var hero = document.getElementById('hero'), cv = document.getElementById('shader');
